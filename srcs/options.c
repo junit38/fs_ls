@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/23 14:02:41 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/24 17:21:09 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		init_options(t_data *data, int argc, char **argv)
 		else if (ft_strcmp(argv[i], "-l") == 0)
 			data->l = 1;
 		else if (ft_strcmp(argv[i], "-R") == 0)
-			data->R = 1;
+			data->rr = 1;
 		else if (ft_strcmp(argv[i], "-a") == 0)
 			data->a = 1;
 		else if (ft_strcmp(argv[i], "-r") == 0)
@@ -44,7 +44,7 @@ void		print_options(t_data *data)
 {
 	if (data->l)
 		ft_putstr("-l ");
-	if (data->R)
+	if (data->rr)
 		ft_putstr("-R ");
 	if (data->a)
 		ft_putstr("-a ");

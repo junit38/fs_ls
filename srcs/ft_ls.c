@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:09:30 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/24 17:21:16 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void		ft_ls_dir_2(DIR *dir, char **table, t_data *data, char *path)
 		swap_folders(table);
 	}
 	print_table(table, data);
-	if (data->R == 1)
+	if (data->rr == 1)
 		ft_ls_recursive(table, data, path);
 	free_table(table);
 }

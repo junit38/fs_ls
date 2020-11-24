@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:18:57 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/24 17:20:19 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ t_data		*init_data(void);
 /*
 ** DIR.C
 */
-int 		is_dir(char *path);
-int 		is_file(char *path);
-int 		get_time(char *path);
+int			is_dir(char *path);
+int			is_file(char *path);
+int			get_time(char *path);
 
 /*
 ** FT_LS.C
