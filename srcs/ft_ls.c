@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:21:16 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/24 17:25:58 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,12 @@ void		ft_ls_recursive(char **table, t_data *data, char *path)
 
 void		ft_ls_dir_2(DIR *dir, char **table, t_data *data, char *path)
 {
-	struct dirent 	*dirent;
+	struct dirent	*dirent;
 	int				i;
 
 	i = 0;
-	while ((dirent = readdir(dir)) != NULL) {
+	while ((dirent = readdir(dir)) != NULL)
+	{
 		if ((dirent->d_name[0] == '.' && data->a)
 			|| (dirent->d_name[0] != '.'))
 		{
@@ -66,7 +67,7 @@ void		ft_ls_dir_2(DIR *dir, char **table, t_data *data, char *path)
 
 void		ft_ls_dir(char *path, t_data *data, int is_alone)
 {
-	DIR 			*dir;
+	DIR				*dir;
 	char			**table;
 
 	if (data->path)
