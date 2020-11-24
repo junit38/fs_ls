@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:24:35 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/24 17:31:29 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ void		swap_folders(char **table)
 		while (table[j])
 		{
 			if (ft_strcmp(table[i], "..") == 0 &&
-				ft_strcmp(table[j], ".") == 0) 
+				ft_strcmp(table[j], ".") == 0)
 			{
 				swap = table[i];
 				table[i] = table[j];
