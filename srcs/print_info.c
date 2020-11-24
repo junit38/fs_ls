@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:24:25 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/24 17:29:46 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,9 +71,9 @@ void        print_time(struct stat sb)
 	}
 }
 
-void        print_info_file(char *p, char *n_p, struct stat sb, t_data *data)
+void		print_info_file(char *p, char *n_p, struct stat sb, t_data *data)
 {
-	ssize_t     buflen;
+	ssize_t		buflen;
 
 	print_permission(sb);
 	buflen = listxattr(n_p, NULL, 0, 0);
@@ -96,7 +96,7 @@ void        print_info_file(char *p, char *n_p, struct stat sb, t_data *data)
 void		print_info(char *path, t_data *data)
 {
 	struct stat sb;
-	char        *new_path;
+	char		*new_path;
 
 	new_path = NULL;
 	if (data->path)
