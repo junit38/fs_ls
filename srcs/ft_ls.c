@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:25:58 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/24 17:32:14 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ void		ft_ls_dir_2(DIR *dir, char **table, t_data *data, char *path)
 	print_table(table, data);
 	if (data->rr == 1)
 		ft_ls_recursive(table, data, path);
-	free_table(table);
 }
 
 void		ft_ls_dir(char *path, t_data *data, int is_alone)
@@ -84,6 +83,7 @@ void		ft_ls_dir(char *path, t_data *data, int is_alone)
 		table = init_table(get_dir_len(path, data));
 		if (table)
 			ft_ls_dir_2(dir, table, data, path);
+		free_table(table);
 		closedir(dir);
 	}
 }
