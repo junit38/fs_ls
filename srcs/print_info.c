@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:29:46 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/24 17:31:01 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ void		print_permission(struct stat sb)
 	ft_putstr(sb.st_mode & S_IXOTH ? "x" : "-");
 }
 
-void        print_owner(struct stat sb, t_data *data)
+void		print_owner(struct stat sb, t_data *data)
 {
-	struct passwd   *pwd;
-	struct group    *gr;
+	struct passwd	*pwd;
+	struct group	*gr;
 
 	pwd = getpwuid(sb.st_uid);
 	ft_putstr(pwd->pw_name);
@@ -39,11 +39,11 @@ void        print_owner(struct stat sb, t_data *data)
 	ft_putnchar(' ', data->group_len - ft_strlen(gr->gr_name) + 1);
 }
 
-void        print_time(struct stat sb)
+void		print_time(struct stat sb)
 {
-	char        *time;
-	char        **split;
-	char        **split_2;
+	char		*time;
+	char		**split;
+	char		**split_2;
 
 	time = ctime(&sb.st_ctime);
 	if (time)
@@ -107,7 +107,7 @@ void		print_info(char *path, t_data *data)
 	}
 	else
 		new_path = ft_strdup(path);
-	if (stat(new_path, &sb) != -1)    
+	if (stat(new_path, &sb) != -1)
 		print_info_file(path, new_path, sb, data);
 	free(new_path);
 }
