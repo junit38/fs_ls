@@ -26,6 +26,7 @@ SRCS = $(LIB)/data.c \
 	   $(LIB)/options.c \
 	   $(LIB)/path.c \
 	   $(LIB)/print_info.c \
+	   $(LIB)/print_info_2.c \
 	   $(LIB)/table.c \
 	   $(LIB)/table_2.c \
 

@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:29:02 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/24 17:36:38 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,11 @@ char		*get_new_path(char *table, t_data *data);
 ** PRINT_INFO.C
 */
 void		print_info(char *path, t_data *data);
+
+/*
+** PRINT_INFO_2.C
+*/
+void		print_time(struct stat sb);
 
 /*
 ** TABLE.C

@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:31:01 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/24 17:36:22 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,38 +39,6 @@ void		print_owner(struct stat sb, t_data *data)
 	ft_putnchar(' ', data->group_len - ft_strlen(gr->gr_name) + 1);
 }
 
-void		print_time(struct stat sb)
-{
-	char		*time;
-	char		**split;
-	char		**split_2;
-
-	time = ctime(&sb.st_ctime);
-	if (time)
-	{
-		split = ft_strsplit(time, ' ');
-		if (split && split[1] && split[2] && split[3])
-		{
-			ft_putstr(split[1]);
-			ft_putchar(' ');
-			ft_putstr(split[2]);
-			if (ft_strlen(split[2]) == 1)
-				ft_putchar(' ');
-			ft_putchar(' ');
-			split_2 = ft_strsplit(split[3], ':');
-			if (split_2 && split_2[0] && split_2[1])
-			{
-				ft_putstr(split_2[0]);
-				ft_putstr(":");
-				ft_putstr(split_2[1]);
-				ft_putchar(' ');
-				free_table(split_2);
-			}
-			free_table(split);
-		}
-	}
-}
-
 void		print_info_file(char *p, char *n_p, struct stat sb, t_data *data)
 {
 	ssize_t		buflen;
@@ -98,15 +66,7 @@ void		print_info(char *path, t_data *data)
 	struct stat sb;
 	char		*new_path;
 
-	new_path = NULL;
-	if (data->path)
-	{
-		new_path = ft_strdup(data->path);
-		new_path = ft_strcat(new_path, "/");
-		new_path = ft_strcat(new_path, path);
-	}
-	else
-		new_path = ft_strdup(path);
+	new_path = get_new_path(path, data);
 	if (stat(new_path, &sb) != -1)
 		print_info_file(path, new_path, sb, data);
 	free(new_path);
