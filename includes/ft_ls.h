@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:20:19 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/24 17:29:02 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,6 @@ int			get_group_len(char *path);
 ** OPTIONS.C
 */
 int			init_options(t_data *data, int argc, char **argv);
-void		print_options(t_data *data);
 
 /*
 ** PATH.C
