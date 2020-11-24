@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:21:09 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/24 17:28:45 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,18 +38,4 @@ int		init_options(t_data *data, int argc, char **argv)
 	if (stop)
 		return (i - 1);
 	return (i);
-}
-
-void		print_options(t_data *data)
-{
-	if (data->l)
-		ft_putstr("-l ");
-	if (data->rr)
-		ft_putstr("-R ");
-	if (data->a)
-		ft_putstr("-a ");
-	if (data->r)
-		ft_putstr("-r ");
-	if (data->t)
-		ft_putstr("-t ");
 }
