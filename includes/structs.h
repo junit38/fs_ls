@@ -6,12 +6,12 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 14:57:57 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/24 17:19:18 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef T_DATA_H
-# define T_DATA_H
+#ifndef STRUCTS_H
+# define STRUCTS_H
 
 typedef struct		s_data
 {
