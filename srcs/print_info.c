@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:36:22 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/24 17:58:13 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,12 @@
 
 void		print_permission(struct stat sb)
 {
-	ft_putstr(S_ISDIR(sb.st_mode) ? "d" : "-");
+	if (S_ISDIR(sb.st_mode))
+		ft_putstr("d");
+	else if (S_ISLNK(sb.st_mode))
+		ft_putstr("l");
+	else
+		ft_putstr("-");
 	ft_putstr(sb.st_mode & S_IRUSR ? "r" : "-");
 	ft_putstr(sb.st_mode & S_IWUSR ? "w" : "-");
 	ft_putstr(sb.st_mode & S_IXUSR ? "x" : "-");
@@ -67,7 +72,7 @@ void		print_info(char *path, t_data *data)
 	char		*new_path;
 
 	new_path = get_new_path(path, data);
-	if (stat(new_path, &sb) != -1)
+	if (lstat(new_path, &sb) != -1)
 		print_info_file(path, new_path, sb, data);
 	free(new_path);
 }

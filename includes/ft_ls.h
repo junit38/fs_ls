@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:36:38 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/24 17:57:32 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ t_data		*init_data(void);
 ** DIR.C
 */
 int			is_dir(char *path);
+int			is_sym(char *path);
 int			is_file(char *path);
 int			get_time(char *path);
 
@@ -58,6 +59,7 @@ void		ft_ls_dirs(char **table, t_data *data, int is_alone);
 ** FT_LS_3.C
 */
 int			get_dir_len(char *path, t_data *data);
+void		ft_ls_sym(char *path, t_data *data);
 
 /*
 ** INFO.C

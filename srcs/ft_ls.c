@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:32:14 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/24 17:57:59 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,9 @@ void		ft_ls_dir(char *path, t_data *data, int is_alone)
 		free(data->path);
 	data->path = ft_strdup(path);
 	dir = opendir(path);
-	if (dir)
+	if (is_sym(path) && data->l)
+		ft_ls_sym(path, data);
+	else if (dir)
 	{
 		if (!is_alone)
 		{

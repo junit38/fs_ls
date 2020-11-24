@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:25:19 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/24 17:49:41 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,18 @@ int		is_dir(char *path)
 	if (stat(path, &sb) != -1)
 	{
 		if (S_ISDIR(sb.st_mode))
+			return (1);
+	}
+	return (0);
+}
+
+int		is_sym(char *path)
+{
+	struct stat sb;
+
+	if (lstat(path, &sb) != -1)
+	{
+		if (S_ISLNK(sb.st_mode))
 			return (1);
 	}
 	return (0);
