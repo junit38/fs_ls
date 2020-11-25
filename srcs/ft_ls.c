@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:57:59 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/25 11:26:32 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ void		main_multi(int argc, char **argv, t_data *data, int i)
 		i++;
 	}
 	sort_table(table);
-	if (!data->r)
+	if (data->r)
 		reverse_table(table);
 	ft_ls_exist(table);
 	ft_ls_files(table, data);

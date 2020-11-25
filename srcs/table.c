@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 16:49:32 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/25 11:26:04 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void		print_table(char **table, t_data *data)
 	int		i;
 
 	i = 0;
+	print_total(data);
 	if (table)
 	{
 		while (table[i])

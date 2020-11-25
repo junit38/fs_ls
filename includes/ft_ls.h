@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:57:32 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/25 11:26:55 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ void		ft_ls_dirs(char **table, t_data *data, int is_alone);
 */
 int			get_dir_len(char *path, t_data *data);
 void		ft_ls_sym(char *path, t_data *data);
+void		print_total(t_data *data);
 
 /*
 ** INFO.C

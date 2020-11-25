@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:58:13 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/25 11:31:34 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,19 @@ void		print_owner(struct stat sb, t_data *data)
 	ft_putnchar(' ', data->group_len - ft_strlen(gr->gr_name) + 1);
 }
 
+void		print_symlink(char *new_path)
+{
+	char 	buf[1024];
+	ssize_t len;
+
+	if ((len = readlink(new_path, buf, sizeof(buf)-1)) != -1)
+	{
+	    buf[len] = '\0';
+	    ft_putstr(" -> ");
+		ft_putstr(buf);
+	}
+}
+
 void		print_info_file(char *p, char *n_p, struct stat sb, t_data *data)
 {
 	ssize_t		buflen;
@@ -63,6 +76,8 @@ void		print_info_file(char *p, char *n_p, struct stat sb, t_data *data)
 	ft_putchar(' ');
 	print_time(sb);
 	ft_putstr(p);
+	if (is_sym(n_p))
+		print_symlink(n_p);
 	ft_putchar('\n');
 }
 

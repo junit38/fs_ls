@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:20:37 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/25 11:15:01 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct		s_data
 	int				nlink_len;
 	int				owner_len;
 	int				group_len;
+	int				total;
 }					t_data;
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:20:45 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/25 11:15:15 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ t_data		*init_data(void)
 		data->nlink_len = 0;
 		data->owner_len = 0;
 		data->group_len = 0;
+		data->total = 0;
 	}
 	return (data);
 }

@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:57:23 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/25 11:26:37 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,15 @@ void		ft_ls_sym(char *path, t_data *data)
 		get_data_info(table, data);
 		print_info(path, data);
 		free_table(table);
+	}
+}
+
+void		print_total(t_data *data)
+{
+	if (data->l)
+	{
+		ft_putstr("total ");
+		ft_putnbr(data->total);
+		ft_putchar('\n');
 	}
 }
