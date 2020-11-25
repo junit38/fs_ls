@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/25 11:26:04 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/25 11:53:43 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,11 @@ void		print_table(char **table, t_data *data)
 				print_info(table[i], data);
 			else
 			{
-				ft_putstr(table[i]);
-				if (table[i + 1])
+				print_color(table[i], data);
+				if (table[i + 1] && !data->one)
 					ft_putchar(' ');
+				if (table[i + 1] && data->one)
+					ft_putchar('\n');
 			}
 			i++;
 		}

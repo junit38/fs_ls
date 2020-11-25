@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/25 11:26:55 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/25 11:51:43 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ t_data		*init_data(void);
 int			is_dir(char *path);
 int			is_sym(char *path);
 int			is_file(char *path);
+int			is_exec(char *path);
 int			get_time(char *path);
 
 /*
@@ -92,6 +93,7 @@ char		*get_new_path(char *table, t_data *data);
 ** PRINT_INFO.C
 */
 void		print_info(char *path, t_data *data);
+void		print_color(char *path, t_data *data);
 
 /*
 ** PRINT_INFO_2.C

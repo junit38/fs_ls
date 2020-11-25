@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/25 11:34:50 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/25 11:53:30 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void		print_info_file(char *p, char *n_p, struct stat sb, t_data *data)
 	ft_putnbr(sb.st_size);
 	ft_putchar(' ');
 	print_time(sb);
-	ft_putstr(p);
+	print_color(p, data);
 	if (is_sym(n_p))
 		print_symlink(n_p);
 	ft_putchar('\n');

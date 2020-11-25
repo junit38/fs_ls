@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/25 11:15:15 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/25 11:52:06 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ t_data		*init_data(void)
 		data->a = 0;
 		data->r = 0;
 		data->t = 0;
+		data->gg = 0;
+		data->one = 0;
 		data->path = NULL;
 		data->size_len = 0;
 		data->nlink_len = 0;

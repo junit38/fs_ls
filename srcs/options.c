@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/24 17:28:45 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/25 11:52:16 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ int		init_options(t_data *data, int argc, char **argv)
 			data->r = 1;
 		else if (ft_strcmp(argv[i], "-t") == 0)
 			data->t = 1;
+		else if (ft_strcmp(argv[i], "-G") == 0)
+			data->gg = 1;
+		else if (ft_strcmp(argv[i], "-1") == 0)
+			data->one = 1;
 		i++;
 	}
 	if (stop)
