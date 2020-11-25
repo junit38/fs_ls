@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/25 11:56:20 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/25 11:57:48 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int		init_options(t_data *data, int argc, char **argv)
 	{
 		if (argv[i][0] != '-')
 			stop = 1;
-		else 
+		else
 			init_options_2(data, argv[i]);
 		i++;
 	}
