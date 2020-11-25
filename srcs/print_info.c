@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/25 11:53:30 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/25 12:05:18 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void		print_info_file(char *p, char *n_p, struct stat sb, t_data *data)
 	ssize_t		buflen;
 
 	print_permission(sb);
-	buflen = listxattr(n_p, NULL, 0, 0);
+	buflen = listxattr(n_p, NULL, 0);
 	if (buflen)
 		ft_putchar('@');
 	else
