@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/15 14:51:02 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/25 11:53:06 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/25 11:57:16 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,26 +52,26 @@ void		print_time(struct stat sb)
 
 void		print_color(char *path, t_data *data)
 {
-	char 		*new_path;
+	char		*new_path;
 
 	new_path = get_new_path(path, data);
 	if (data->gg && is_exec(new_path) && !is_dir(new_path))
-	{	
+	{
 		ft_putstr("\033[0;31m");
 		ft_putstr(path);
-	 	ft_putstr("\033[0m");
+		ft_putstr("\033[0m");
 	}
 	else if (data->gg && is_dir(new_path))
-	{	
+	{
 		ft_putstr("\033[1;36m");
 		ft_putstr(path);
-	 	ft_putstr("\033[0m");
+		ft_putstr("\033[0m");
 	}
 	else if (data->gg && is_sym(new_path))
-	{	
+	{
 		ft_putstr("\033[0;35m");
 		ft_putstr(path);
-	 	ft_putstr("\033[0m");
+		ft_putstr("\033[0m");
 	}
 	else
 		ft_putstr(path);
