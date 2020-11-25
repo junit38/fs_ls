@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmery <jmery@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 15:16:10 by jmery             #+#    #+#             */
-/*   Updated: 2013/12/20 21:24:35 by jmery            ###   ########.fr       */
+/*   Updated: 2020/01/15 10:34:05 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void				*ft_memmove(void *s1, const void *s2, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t				ft_strlen(const char *str);
+char				*ft_strndup(const char *s1, size_t n);
 char				*ft_strdup(const char *str);
 char				*ft_strcpy(char *s1, const char *s2);
 char				*ft_strncpy(char *s1, const char *s2, size_t n);

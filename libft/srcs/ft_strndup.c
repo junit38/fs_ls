@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmery <jmery@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/22 16:09:29 by jmery             #+#    #+#             */
-/*   Updated: 2013/11/22 16:09:30 by jmery            ###   ########.fr       */
+/*   Created: 2013/11/19 11:51:32 by jmery             #+#    #+#             */
+/*   Updated: 2020/01/15 10:33:03 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <ft.h>
 
-int		ft_strnequ(char const *s1, char const *s2, size_t n)
+char	*ft_strndup(const char *str, size_t n)
 {
-	unsigned int	i;
-	int				eq;
+	char	*dup;
 
-	i = 0;
-	eq = 1;
-	while (s1[i] != '\0' && s2[i] != '\0' && eq == 1 && i < n)
-	{
-		if (s1[i] != s2[i])
-			eq = 0;
-		i++;
-	}
-	if (s1[i] != s2[i] && i != n)
-		eq = 0;
-	return (eq);
+	dup = (char*)malloc(sizeof(dup) * n);
+	if (dup)
+		dup = ft_strcpy(dup, str);
+	return (dup);
 }

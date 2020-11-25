@@ -26,6 +26,7 @@ OBJ = 	$(LIB)ft_memset.o \
 		$(LIB)ft_strlen.o \
 		$(LIB)ft_strdup.o \
 		$(LIB)ft_strcpy.o \
+		$(LIB)ft_strndup.o \
 		$(LIB)ft_strncpy.o \
 		$(LIB)ft_strcat.o \
 		$(LIB)ft_strncat.o \
